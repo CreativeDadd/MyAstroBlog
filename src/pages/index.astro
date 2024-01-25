@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css'
 const homePage = "home Page"
 ---
 
@@ -11,9 +12,11 @@ const homePage = "home Page"
 		<title>My Astro Blog {homePage}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		<div class="nav">
+			<a class="navlink" href="/">Home</a>
+			<a class="navlink" href="/about/">About</a>
+			<a class="navlink" href="/blog/">Blog</a>
+		</div>
 
 
 
@@ -26,5 +29,6 @@ const homePage = "home Page"
 		<p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
 	  
 		<p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+
 	  </body>
 </html>
