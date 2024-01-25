@@ -1,4 +1,9 @@
 ---
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import image from 'astro:assets';
+import img1 from '../assets/astrojs2.jpeg'
 import '../styles/global.css'
 const pageTitle = "About Me";
 
@@ -58,11 +63,7 @@ const {skillColor, fontWeight, fontStyle, fontTransform, letterSpacing} = cssObj
 		  </style>
 	</head>
 	<body>
-        <div class="nav">
-			<a class="navlink" href="/">Home</a>
-			<a class="navlink" href="/about/">About</a>
-			<a class="navlink" href="/blog/">Blog</a>
-		</div>
+    <Header />
 
 
 <h1>{pageTitle}</h1>
@@ -87,7 +88,7 @@ const {skillColor, fontWeight, fontStyle, fontTransform, letterSpacing} = cssObj
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 <h2>My Second Day Of Learning Astro.</h2>
-<img src="../images/astro2.js" alt="atsro picture" />
+<img style="width: 280px;" src='j' alt="atsro picture" />
 <p>I am learning Astro js and I am enjoying it so far. I am excited to learn more about it and to build more projects.</p>
 
 <h4>What I Love Most About Atsro Js</h4>
@@ -103,10 +104,11 @@ I have learned about Astro and I am excited to learn more about it. I have learn
 </p>
 	
 
+<Footer />
 
-
-
-
+<script>
+	import '../scripts/menu.js';
+</script>
 </body>
 
 </html>
